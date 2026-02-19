@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Janaina Clok | Psicóloga Clínica</title>
+    <!-- Tailwind CSS via CDN para demonstração rápida, mas o package.json inclui a versão de produção -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,12 +26,7 @@
         h1, h2, h3, h4 {
             font-family: 'Cormorant+Garamond', serif;
         }
-        .text-terracotta { color: var(--terracotta); }
-        .bg-terracotta { background-color: var(--terracotta); }
-        .bg-soft-sand { background-color: var(--soft-sand); }
-        .border-terracotta { border-color: var(--terracotta); }
-        
-        /* Ensure zero jitter on scroll */
+        /* Correção para evitar jitter no scroll */
         html {
             scroll-behavior: smooth;
         }
@@ -38,9 +34,9 @@
 <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.2.4",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
     "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
     "lucide-react": "https://esm.sh/lucide-react@^0.575.0"
   }
 }
@@ -48,5 +44,6 @@
 </head>
 <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
 </body>
 </html>
